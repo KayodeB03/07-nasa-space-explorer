@@ -7,7 +7,7 @@
 
 /* Base page styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   background-color: #f1f1f1;
   padding: 20px;
 }
@@ -29,7 +29,7 @@ body {
 }
 
 h1 {
-  font-family: Verdana, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   color: #212121;
 }
@@ -53,7 +53,7 @@ h1 {
 /* Inputs and buttons */
 input[type="date"],
 button {
-  font-family: Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #666;
   padding: 10px 15px;
@@ -64,14 +64,21 @@ button {
   width: 100%;
 }
 
+input[type="date"] {
+  font-weight: bold;
+}
+
 /* Button specific */
 button {
-  background-color: #d3d3d3;
-  color: black;
+  background-color: #061f4a;
+  color: #fff;
   cursor: pointer;
+  border: 1px solid #061f4a;
+  font-family: Helvetica, Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 button:hover {
-  background-color: #bfbfbf;
+  background-color: #0b3d91;
 }
 
 /* Stack horizontally on wider screens */
@@ -108,6 +115,7 @@ button:hover {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 /* Three columns on wider screens */
@@ -128,6 +136,7 @@ button:hover {
   margin-top: 10px;
   padding: 5px;
   font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 /* Placeholder content */
@@ -136,9 +145,18 @@ button:hover {
   text-align: center;
   padding: 40px;
   color: #666;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .placeholder-icon {
   font-size: 48px;
   margin-bottom: 20px;
+}
+
+/* Bootstrap card image scaling */
+.card.h-100 {
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.card.h-100:hover {
+  transform: scale(1.03);
 }
